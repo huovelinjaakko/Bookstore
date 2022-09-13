@@ -42,7 +42,7 @@ public class BookController {
 	}
 	
 	@PostMapping("saveBook")
-	public String saveCar(Book book) {
+	public String saveBook(Book book) {
 		repository.save(book);
 		return "redirect:booklist";
 	}
