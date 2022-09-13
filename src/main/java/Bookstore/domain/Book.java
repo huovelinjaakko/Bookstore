@@ -1,9 +1,26 @@
 package Bookstore.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
 	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
 	private String title, author, isbn;
-	private int year, price;
+	private int bookYear, price;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Book() {
 		super();
@@ -14,7 +31,7 @@ public class Book {
 		super();
 		this.title = title;
 		this.author = author;
-		this.year = year;
+		this.bookYear = year;
 		this.isbn = isbn;
 		this.price = price;
 	}
@@ -35,12 +52,12 @@ public class Book {
 		this.author = author;
 	}
 
-	public int getYear() {
-		return year;
+	public int getBookYear() {
+		return bookYear;
 	}
 
-	public void setYear(int year) {
-		this.year = year;
+	public void setBookYear(int bookYear) {
+		this.bookYear = bookYear;
 	}
 
 	public String getIsbn() {
@@ -61,7 +78,7 @@ public class Book {
 
 	@Override
 	public String toString() {
-		return "Book [title=" + title + ", author=" + author + ", isbn=" + isbn + ", year=" + year + ", price=" + price
+		return "Book [title=" + title + ", author=" + author + ", isbn=" + isbn + ", year=" + bookYear + ", price=" + price
 				+ "]";
 	}
 
