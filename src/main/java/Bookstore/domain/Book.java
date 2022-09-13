@@ -41,16 +41,6 @@ public class Book {
 		
 	}
 
-	public Book(String title, String author, String isbn, int bookYear, int price, Category category) {
-		super();
-		this.title = title;
-		this.author = author;
-		this.isbn = isbn;
-		this.bookYear = bookYear;
-		this.price = price;
-		this.category = category;
-	}
-
 	public Book(String title, String author, int year, String isbn, int price, Category category) {
 		super();
 		this.title = title;
